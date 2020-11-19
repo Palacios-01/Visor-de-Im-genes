@@ -1,9 +1,33 @@
-# Visor-de-Im-genes
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html>
 
 <head>
+  <title>Visor de Imagenes</title> 
+
+<style type="text/css">
+* { margin: auto; padding: 0; text-align: center }
+#cabecera { font: bold 1.3em verdana; background-color: #feffe4;  }
+h1 { text-align: center ; padding: 0.5em }
+#menu { float: left; width: 25%; background-color: #e3f2ff; }
+#menu img { width: 35%; margin: 5%; cursor: pointer; }
+#principal { float: left; width: 75%; }
+#visor { width: 60%; margin: 10% }
+#visor img { width: 100% }
+</style>
+
+<script type="text/javascript">
+window.onload = function() { //tras cargar la página ...
+visor1=document.getElementById("visor"); //referencia al visor
+mititulo=document.getElementById("titulo"); //referencia al pie de foto
+}
+function mifoto(num) { //cambiar la imagen
+         f="foto"+num+".jpg"; //ruta de la nueva imagen
+         document.images["fotoVisor"].src=f; //cambiar imagen
+         t=document.images["fotos"+num].alt; //texto de pie de foto
+         mititulo.innerHTML=t; //cambiar pie de foto
+         }
+</script>
 </head>
 <body>
 <div id="cabecera">
